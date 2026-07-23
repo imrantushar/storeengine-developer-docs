@@ -8,7 +8,23 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'StoreEngine Developer Docs',
   tagline: 'Build, extend, and integrate with StoreEngine & StoreEngine Pro',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
+
+  // PNG + apple-touch fallbacks for browsers that don't render SVG favicons.
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/img/favicon-32.png' },
+    },
+    {
+      tagName: 'link',
+      attributes: { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/img/favicon-16.png' },
+    },
+    {
+      tagName: 'link',
+      attributes: { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/apple-touch-icon.png' },
+    },
+  ],
 
   // Future flags — opt into Docusaurus v4 behaviour early.
   future: {
@@ -52,8 +68,7 @@ const config = {
         docs: {
           routeBasePath: '/', // Serve docs at the site root — this is a docs-only site.
           sidebarPath: './sidebars.js',
-          editUrl:
-            'https://github.com/imrantushar/storeengine-developer-docs/tree/main/',
+          // No editUrl → the "Edit this page" link is omitted on every page.
           showLastUpdateTime: true,
           showLastUpdateAuthor: true,
         },
@@ -98,7 +113,7 @@ const config = {
           alt: 'StoreEngine Developer Docs',
           src: 'img/navbar-logo.svg',
           srcDark: 'img/navbar-logo-dark.svg',
-          width: 178,
+          width: 153,
           height: 32,
         },
         items: [
