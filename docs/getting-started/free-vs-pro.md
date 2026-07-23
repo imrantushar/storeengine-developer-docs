@@ -142,7 +142,7 @@ Several slugs appear in **both** plugins (for example `membership`, `subscriptio
 | webhooks | |
 
 :::info Payment gateways are free addons
-The bundled payment gateways — Stripe, PayPal, Razorpay, and Paddle — ship as **free** addons. Adding a new gateway does not require Pro; see [Payment Gateways](/payment-gateways/overview).
+The bundled payment gateways — Stripe, PayPal, Razorpay, and Paddle — ship as **free** addons. Adding a new gateway does not require Pro; see [Payment Gateways](/reference/payment-gateways).
 :::
 
 ## Where to go next

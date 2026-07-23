@@ -26,11 +26,16 @@ const config = {
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   onBrokenAnchors: 'warn',
 
   markdown: {
+    // Parse `.md` as CommonMark (so `<id>` in route paths and `{…}` in prose
+    // are treated as literal text, not JSX). `.mdx` files still use MDX.
+    format: 'detect',
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
   themes: ['@docusaurus/theme-mermaid'],
 

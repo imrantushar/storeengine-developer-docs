@@ -57,7 +57,7 @@ If you are a store owner looking for setup and configuration help, the product d
 
 - **Addons** — self-contained feature packages that register their own namespace, database schema, admin UI, and hooks. This is the primary way to extend StoreEngine. See [Building Addons](/addons/architecture).
 - **REST integrations** — headless storefronts, mobile apps, POS clients, and server-to-server automation against the `storeengine/v1` API. See [REST API](/rest-api/overview).
-- **Payment gateways** — plug new processors into the checkout flow via the gateway framework. See [Payment Gateways](/payment-gateways/overview).
+- **Payment gateways** — plug new processors into the checkout flow via the gateway framework. See [Payment Gateways](/reference/payment-gateways).
 - **Template overrides** — customize storefront markup by copying templates into `yourtheme/storeengine/`. See [Templates](/reference/templates).
 - **Hook extensions** — react to and modify behavior through `storeengine/…` actions and filters. See [Hooks](/reference/hooks/actions).
 - **WP-CLI automation** — script store operations. See [WP-CLI](/reference/wp-cli).
