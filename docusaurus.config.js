@@ -94,11 +94,12 @@ const config = {
         },
       },
       navbar: {
-        title: 'StoreEngine Developers',
         logo: {
-          alt: 'StoreEngine',
-          src: 'img/logo.svg',
-          srcDark: 'img/logo-dark.svg',
+          alt: 'StoreEngine Developer Docs',
+          src: 'img/navbar-logo.svg',
+          srcDark: 'img/navbar-logo-dark.svg',
+          width: 178,
+          height: 32,
         },
         items: [
           {
@@ -120,53 +121,26 @@ const config = {
             label: 'Reference',
           },
           {
-            href: 'https://storeengine.pro',
-            label: 'storeengine.pro',
+            href: 'https://www.facebook.com/groups/academylmsteam',
+            label: 'Community',
             position: 'right',
           },
           {
-            href: 'https://github.com/imrantushar/storeengine-developer-docs',
-            label: 'GitHub',
+            href: 'https://community.kodezen.com/tickets',
+            label: 'Support Ticket',
+            position: 'right',
+          },
+          {
+            href: 'https://storeengine.pro',
+            label: 'storeengine.pro',
             position: 'right',
           },
         ],
       },
       footer: {
         style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              { label: 'Getting Started', to: '/getting-started/introduction' },
-              { label: 'Building Addons', to: '/addons/architecture' },
-              { label: 'REST API', to: '/rest-api/overview' },
-              { label: 'Hooks Reference', to: '/reference/hooks/actions' },
-            ],
-          },
-          {
-            title: 'StoreEngine',
-            items: [
-              { label: 'Website', href: 'https://storeengine.pro' },
-              { label: 'Blog', href: 'https://storeengine.pro/blog/' },
-              {
-                label: 'WordPress.org',
-                href: 'https://wordpress.org/plugins/storeengine/',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/imrantushar/storeengine-developer-docs',
-              },
-              { label: 'X / Twitter', href: 'https://twitter.com/StoreEngineTeam' },
-              { label: 'YouTube', href: 'https://www.youtube.com/@StoreEngine' },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} StoreEngine by Kodezen. Built with Docusaurus.`,
+        links: [],
+        copyright: `Copyright © ${new Date().getFullYear()} StoreEngine by Kodezen LLC`,
       },
       prism: {
         theme: prismThemes.github,
