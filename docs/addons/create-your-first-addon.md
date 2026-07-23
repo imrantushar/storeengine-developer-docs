@@ -72,7 +72,7 @@ final class MyFeature extends AbstractAddon {
 // End of file my-feature.php.
 ```
 
-:::warning `$addon_name` is mandatory
+:::warning[`$addon_name` is mandatory]
 `AbstractAddon::run()` verifies `$addon_name` before doing anything else. If you forget to redeclare it, StoreEngine fires `_doing_it_wrong()` and your addon never boots. The slug must be unique across all addons.
 :::
 
@@ -135,7 +135,7 @@ add_filter( 'storeengine/addons/loader_args', function ( array $addons ): array 
 
 The value is the **class name** (without namespace). StoreEngine builds the namespace as `StoreEngine\Addons\<ClassName>`, registers it with the autoloader against `STOREENGINE_ADDONS_DIR_PATH . '<slug>/'`, and calls `<Namespace>\<ClassName>::init()->run()`.
 
-:::note Autoload path
+:::note[Autoload path]
 The loader points the autoloader at `STOREENGINE_ADDONS_DIR_PATH . $slug . '/'`. If your external addon lives outside that directory, register its namespace yourself (for example via your plugin's own PSR-4 autoloader or `Autoload::get_instance()->add_namespace_directory()`) so the class can be found. See [Registration and gating](/addons/registration-and-gating).
 :::
 
@@ -163,7 +163,7 @@ add_action( 'storeengine/addons/my-feature/loaded', function () {
 } );
 ```
 
-:::tip Quick check from anywhere
+:::tip[Quick check from anywhere]
 Ask the gate directly:
 
 ```php

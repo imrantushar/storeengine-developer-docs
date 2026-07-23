@@ -41,7 +41,7 @@ A `Price` can walk back to its product:
 $product = $price->get_product();
 ```
 
-:::tip price_id is the currency of cart and orders
+:::tip[price_id is the currency of cart and orders]
 `Cart::add_product_to_cart()` takes a `price_id`, and `Order::add_product()` takes a `Price` object. Keep the price id around whenever you render a buy button. See [Cart](/data/cart).
 :::
 

@@ -73,7 +73,7 @@ add_filter( 'storeengine/addons/loader_args', function ( array $addons ): array 
 } );
 ```
 
-:::note Autoload path for external addons
+:::note[Autoload path for external addons]
 The core loader points the autoloader at `STOREENGINE_ADDONS_DIR_PATH . $slug . '/'`. If your addon class lives outside StoreEngine's `addons/` directory, register its namespace with your own autoloader (or `Autoload::get_instance()->add_namespace_directory()`) so it can be found — registering the slug alone isn't enough when the file lives elsewhere.
 :::
 

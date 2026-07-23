@@ -11,7 +11,7 @@ The Storefront Auth controller (`api/storefront-auth.php`, base `auth`) mirrors 
 
 All four routes are **public** (`__return_true`), except registration, which is additionally gated by WordPress's "Anyone can register" setting.
 
-:::info Same-origin only for the cookie session
+:::info[Same-origin only for the cookie session]
 `POST /auth/login` sets the standard WordPress auth cookie via `wp_signon()`. That cookie can only be set for the same origin — you cannot establish a cookie session cross-origin. Cross-origin headless storefronts should authenticate with [Application Passwords](/rest-api/authentication#application-passwords-external-clients) instead. Protect same-origin calls with the WP REST nonce (`X-WP-Nonce`).
 :::
 

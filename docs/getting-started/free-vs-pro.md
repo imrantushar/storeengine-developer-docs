@@ -103,7 +103,7 @@ if ( Helper::get_addon_active_status( 'installment-plan', true ) ) {
 }
 ```
 
-:::warning Active is not the same as licensed
+:::warning[Active is not the same as licensed]
 `get_addon_active_status()` confirms Pro is present and the addon is enabled. Licensed Pro features additionally validate a license key at runtime. In development you can load Pro's code by activating the plugin, but license-gated behavior may remain inactive until a valid license is applied.
 :::
 
@@ -141,7 +141,7 @@ Several slugs appear in **both** plugins (for example `membership`, `subscriptio
 | subscription | |
 | webhooks | |
 
-:::info Payment gateways are free addons
+:::info[Payment gateways are free addons]
 The bundled payment gateways — Stripe, PayPal, Razorpay, and Paddle — ship as **free** addons. Adding a new gateway does not require Pro; see [Payment Gateways](/reference/payment-gateways).
 :::
 

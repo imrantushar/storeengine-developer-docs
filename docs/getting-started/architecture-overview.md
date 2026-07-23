@@ -64,7 +64,7 @@ The defining architectural choice: **core features and commerce features ship as
 
 Only **active** addons participate in schema syncing. Every addon declares a `get_db_version()`; the manager compares it against the single `storeengine_addons_db_version` option and reruns `install_tables()` on a mismatch — no per-addon option or bespoke upgrade hook required.
 
-:::tip Extending the addon roster
+:::tip[Extending the addon roster]
 Because the addon map runs through `storeengine/addons/loader_args`, a third-party plugin can register its own addon into StoreEngine's framework by filtering that array. See [Building Addons](/addons/architecture).
 :::
 

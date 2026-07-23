@@ -32,7 +32,7 @@ $order = ( new Order() )->get_by_key( $order_key );
 $order = ( new Order() )->get_by_meta( '_external_ref', 'INV-2025-0091' );
 ```
 
-:::note There are no global helper functions
+:::note[There are no global helper functions]
 StoreEngine does not ship `storeengine_get_order()` style globals. Instantiate `Order` directly.
 :::
 

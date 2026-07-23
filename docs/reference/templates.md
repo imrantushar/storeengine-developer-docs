@@ -19,7 +19,7 @@ The defaults live in the plugin's `templates/` directory. The locator resolves a
 
 `{template_path}` defaults to `storeengine/` and is filterable (see [`storeengine/template_path`](#filters)). The first file that exists wins, so a theme copy always beats the plugin default.
 
-:::tip Override path
+:::tip[Override path]
 To override a template, copy the default file from the plugin's `templates/` directory into **`yourtheme/storeengine/{template-name}.php`**, keeping the same sub-path. For example, override the checkout form by copying `templates/checkout/form.php` to `yourtheme/storeengine/checkout/form.php`.
 :::
 
@@ -58,7 +58,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 Because templates receive their data through `extract()`, the same variables the plugin passed (`$order`, `$products`, `$cart_sub_total`, etc.) are already in scope in your copy — do not re-declare them.
 
-:::warning Keep overrides in sync
+:::warning[Keep overrides in sync]
 A theme override is a full copy, frozen at the plugin version you copied it from. When StoreEngine updates a default template, your copy will not pick up the change. Re-diff your overrides after major updates.
 :::
 

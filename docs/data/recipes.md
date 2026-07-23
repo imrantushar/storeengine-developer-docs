@@ -7,7 +7,7 @@ keywords: [storeengine, php recipes, create order, add to cart, price_id, load c
 
 Practical, copy-paste recipes for working with StoreEngine's domain objects. They use the exact factory and helper patterns the objects expect.
 
-:::note No `storeengine_get_*` globals
+:::note[No `storeengine_get_*` globals]
 StoreEngine does not provide global getter functions like `storeengine_get_order()`. Instantiate the domain classes directly, or use `StoreEngine\Utils\Helper` and `StoreEngine\Classes\ProductFactory`.
 :::
 

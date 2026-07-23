@@ -24,10 +24,20 @@ const sidebars = {
       items: [
         'addons/architecture',
         'addons/create-your-first-addon',
+        'addons/standalone-plugin',
         'addons/settings-api',
         'addons/database-tables',
         'addons/registration-and-gating',
         'addons/dependencies',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Theme Integration',
+      collapsed: false,
+      items: [
+        'theme-integration/making-a-theme-compatible',
+        'theme-integration/styling',
       ],
     },
     {

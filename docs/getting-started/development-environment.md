@@ -17,7 +17,7 @@ This guide walks you through building StoreEngine locally from source — instal
 | Composer | optional but recommended | Manages Strauss-prefixed PHP dependencies. |
 | WP-CLI | optional but recommended | Handy for activation and store scripting. |
 
-:::note Node version
+:::note[Node version]
 The pinned Node version lives in `.nvmrc`. On Linux/macOS, `nvm use` reads it automatically. On Windows, nvm does not read `.nvmrc` — run `nvm use <version>` explicitly, and prefer Git Bash for parity with the shell commands below.
 :::
 
@@ -64,7 +64,7 @@ StoreEngine compiles JavaScript with Webpack. Start the compiler:
 npm start
 ```
 
-:::warning No dev server
+:::warning[No dev server]
 `npm start` compiles the JavaScript bundles — it does **not** launch a hot-reloading dev server. Re-run it (or use a watch task) after editing source. For a one-off production build, use the build script described in [Source vs built assets](#source-vs-built-assets).
 :::
 
@@ -81,7 +81,7 @@ wp plugin activate storeengine-pro
 
 Or from **Plugins → Installed Plugins** in wp-admin. On first activation, the installer creates the `wp_storeengine_*` tables and registers default options; a setup redirect walks you through initial configuration.
 
-:::info Pro licensing
+:::info[Pro licensing]
 Pro addons are gated behind Pro being **active and licensed**. In development you can activate the plugin to load its code, but licensed features validate a license key at runtime. See [Free vs Pro](/getting-started/free-vs-pro).
 :::
 
@@ -117,7 +117,7 @@ StoreEngine follows the WordPress coding standards for PHP and standard JS tooli
 
 - **JavaScript** — ESLint and Prettier per the repo config; run through the project's npm scripts (see `package.json`).
 
-:::tip Git merge driver
+:::tip[Git merge driver]
 The repo recommends configuring the "theirs" merge driver to smooth conflict resolution during rebases: `git config merge.theirs.driver true`.
 :::
 

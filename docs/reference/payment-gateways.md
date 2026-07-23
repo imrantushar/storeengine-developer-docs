@@ -9,7 +9,7 @@ A StoreEngine payment gateway is a PHP class that extends `StoreEngine\Payment\G
 
 This page shows the base class contract, how to register, and a minimal working gateway.
 
-:::caution Use the modern base class
+:::caution[Use the modern base class]
 `StoreEngine\Classes\AbstractPaymentGateway` and `AbstractPaymentGateways` are **deprecated**. Always extend `StoreEngine\Payment\Gateways\PaymentGateway`.
 :::
 

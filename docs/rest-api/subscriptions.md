@@ -7,7 +7,7 @@ keywords: [storeengine rest api, subscriptions api, admin subscriptions, recurri
 
 The admin Subscription controller (`api/subscription.php`, base `subscription`) provides a store-wide, read-only view of subscriptions for back-office tooling. It is the admin counterpart to the customer-facing [Me → Subscriptions](/rest-api/me-subscriptions) controller (which can also mutate subscriptions the customer owns).
 
-:::note Addon requirement
+:::note[Addon requirement]
 Subscriptions exist only when the Subscription addon is active. On a store without it, these routes are not registered.
 :::
 

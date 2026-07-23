@@ -42,7 +42,7 @@ You can require more than one:
 $map['my-feature'] = [ 'subscription', 'invoice' ];
 ```
 
-:::note Hard vs soft dependencies
+:::note[Hard vs soft dependencies]
 This map is for **hard** requirements — the consumer literally cannot function without them, so activation is blocked. For a **soft** dependency (extra behavior when another addon is present, graceful fallback when it isn't), don't add it to the map. Instead, feature-detect at runtime with `Helper::get_addon_active_status()`. Core does this: POS *hard*-requires `inventory` but treats `inventory-pro` as a soft dependency, enabling per-location stock only when it's active.
 :::
 

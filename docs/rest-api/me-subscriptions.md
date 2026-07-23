@@ -7,7 +7,7 @@ keywords: [storeengine rest api, customer subscriptions api, cancel subscription
 
 The `me/subscriptions` controller (`api/me-subscriptions.php`, base `me/subscriptions`) lets a signed-in customer manage their own subscriptions from a headless dashboard. It is the customer-facing counterpart to the admin-only [Subscriptions API](/rest-api/subscriptions).
 
-:::note Addon requirement
+:::note[Addon requirement]
 These routes register **only when the Subscription addon is active** (specifically, when `SubscriptionCollection` exists). On a store without subscriptions the routes do not exist and return `404`.
 :::
 

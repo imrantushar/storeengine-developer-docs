@@ -96,7 +96,7 @@ Consequences worth knowing:
 - **Bumping the version constant re-runs `install_tables()`** on the next request — this is how you ship a schema migration.
 - **Pro reuses the same machinery.** The Pro loader calls `\StoreEngine\Addons::sync_schema_for()` with its own addon instances, writing into the same `storeengine_addons_db_version` option. See [Registration and gating](/addons/registration-and-gating).
 
-:::tip Also install on activation
+:::tip[Also install on activation]
 The schema manager handles version-driven syncing, but many addons also call their installer from `addon_activation_hook()` so tables exist the moment the addon is switched on — before the next `init` sync. The affiliate addon does exactly this:
 
 ```php
@@ -186,7 +186,7 @@ Note the conventions:
 - **Don't use `IF NOT EXISTS`** as a substitute for correctness — `dbDelta` compares the described schema against the live table and only applies differences. (The affiliate example above uses `CREATE TABLE IF NOT EXISTS`, which is harmless, but rely on `dbDelta`'s diffing, not on the guard, for upgrades.)
 - Keep column and key definitions stable between versions; to change a column, edit its line and bump the DB version so `dbDelta` alters it.
 
-:::warning Idempotency is a hard requirement
+:::warning[Idempotency is a hard requirement]
 `install_tables()` may be called on every activation and after every version bump. Never put one-shot side effects (inserting seed rows unconditionally, dropping data) directly in it. Guard any data seeding so re-running is a no-op.
 :::
 

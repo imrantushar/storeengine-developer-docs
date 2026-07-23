@@ -16,7 +16,7 @@ Post types and core taxonomies are registered in `includes/database.php`. Their 
 | `storeengine_product` | `Helper::PRODUCT_POST_TYPE` | Products. Each product owns one or more prices/plans (see [Products](/data/products)). | `includes/database.php` |
 | `storeengine_coupon` | `Helper::COUPON_POST_TYPE` | Discount coupons. Wrapped by the `Coupon` object (see [Coupons](/data/coupons)). | `includes/database.php` |
 
-:::note Orders and subscriptions are not post types
+:::note[Orders and subscriptions are not post types]
 Both live in the `wp_storeengine_orders` table, discriminated by a `type` column. Load them with the `Order` and `Subscription` objects, not `get_post()`.
 :::
 

@@ -18,7 +18,7 @@ StoreEngine ships in two plugins:
 
 Unlike classic WordPress commerce plugins that store everything in `wp_posts` and `wp_postmeta`, StoreEngine uses **custom database tables** (prefixed `wp_storeengine_*`) for high-volume, relational data such as orders, order items, carts, subscriptions, and payment tokens. Products and coupons remain custom post types (`storeengine_product`, `storeengine_coupon`), so they benefit from the familiar WordPress editing experience, while transactional data lives in a schema built for scale.
 
-:::info Orders are not posts
+:::info[Orders are not posts]
 Orders and subscriptions are **not** custom post types. They live in the `storeengine_orders` table and are discriminated by a `type` column. Query and manipulate them through the domain classes and models, not `WP_Query`. See [Data & Objects](/data/orders).
 :::
 

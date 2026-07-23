@@ -87,7 +87,7 @@ Returns a `key => type` map that tells the admin Settings UI how to treat each f
 
 The keys must match those in `get_default_settings()`. This map is what StoreEngine merges into the settings-fields payload the admin app consumes.
 
-:::note One key holds the whole addon
+:::note[One key holds the whole addon]
 All of an addon's settings live in a single option keyed by `$settings_name`. You read individual values by key through the reader below — you don't register each field as its own WordPress option.
 :::
 

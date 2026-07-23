@@ -45,7 +45,7 @@ composer run update   # update production deps + reprefix
 
 Action Scheduler and the StoreEngine WordPress SDK are excluded from Strauss copying (they self-prefix or must keep their namespace). Pro uses the same setup with the `StoreEnginePro\` prefix.
 
-:::warning Ship the vendor directory whole
+:::warning[Ship the vendor directory whole]
 When packaging, ship `vendor/` wholesale after a `--no-dev` install rather than excluding the directory. Marking the vendor *directory* as ignored can drop `vendor/autoload.php` under some archiving paths and fatally break the plugin.
 :::
 

@@ -60,7 +60,7 @@ $order->payment_complete( $transaction_id );
 
 `set_status()` sets the field and returns `[from, to]` but does not save on its own — prefer `update_status()`. See [Orders › Changing status](/data/orders).
 
-:::tip Let payment_complete() drive paid transitions
+:::tip[Let payment_complete() drive paid transitions]
 On successful payment, call `payment_complete()` rather than manually setting `processing`/`completed`. It moves the order through the right states, stamps the paid date, and records the transaction.
 :::
 

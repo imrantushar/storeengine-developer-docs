@@ -7,7 +7,7 @@ keywords: [storeengine, subscription object, recurring billing, renewal, subscri
 
 Subscriptions model recurring billing. The `StoreEngine\Addons\Subscription\Classes\Subscription` object **extends `Order`**, so every method described in [Orders](/data/orders) — totals, items, addresses, `payment_complete()` — applies here too. A subscription is stored in the shared `wp_storeengine_orders` table with `type = 'subscription'`, and its schedule detail lives in `wp_storeengine_subscriptions`.
 
-:::note Requires the Subscription addon
+:::note[Requires the Subscription addon]
 `Subscription` ships with the Subscription addon (`addons/subscription/`). The class and its schedule table only exist when that addon is active. Guard your integration accordingly.
 :::
 

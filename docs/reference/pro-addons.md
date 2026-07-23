@@ -57,7 +57,7 @@ foreach ( $addons as $slug => $class ) {
 
 Each Pro addon class extends the same `StoreEngine\Classes\AbstractAddon` base as core addons, so it participates in the shared active-status gate, schema-sync, and settings pipeline. Only enabled addons sync their schema. Add or replace entries through the `storeengine_pro/addons/loader_args` filter to register your own Pro-tier addon.
 
-:::note Requires the free core
+:::note[Requires the free core]
 StoreEngine Pro declares a minimum core version (`STOREENGINE_PRO_MIN_CORE_VERSION`) and cannot run without the free StoreEngine plugin active — it consumes core's addon framework, schema manager, and settings API.
 :::
 

@@ -34,7 +34,7 @@ $cart->add_product_to_cart( $price_id, 2 );
 $cart->add_product_to_cart( $price_id, 1, $variation_id, [ 'color' => 'blue' ] );
 ```
 
-:::warning price_id vs product_id
+:::warning[price_id vs product_id]
 `add_product_to_cart()` expects a **price_id**. If you only have a product, call `$product->get_prices()` and use `$price->get_id()`. Passing a product id will not add the intended item.
 :::
 

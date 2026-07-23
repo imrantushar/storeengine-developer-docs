@@ -27,7 +27,7 @@ The second constructor argument, `bool $in_session`, ties the customer to the cu
 $customer = new Customer( 0, true ); // session-backed guest customer
 ```
 
-:::note No global accessor
+:::note[No global accessor]
 There is no `storeengine_get_customer()` global — instantiate `Customer` directly with the user id.
 :::
 

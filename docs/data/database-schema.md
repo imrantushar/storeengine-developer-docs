@@ -15,11 +15,11 @@ Each table has a `CREATE TABLE` definition in `includes/database/create-*.php`. 
 
 All tables use the site's WordPress table prefix. On a default install that prefix is `wp_`, so `storeengine_orders` becomes `wp_storeengine_orders`. Examples below use the `wp_` prefix; read it as `{$wpdb->prefix}` in code.
 
-:::note Orders and subscriptions share one table
+:::note[Orders and subscriptions share one table]
 Both orders and subscriptions are stored in `wp_storeengine_orders`. A `type` column discriminates the row: `'order'` for a regular order, `'subscription'` for a subscription. There is no separate subscriptions post type or master table — the schedule detail for a subscription lives in `wp_storeengine_subscriptions`, keyed back to the order row.
 :::
 
-:::note Coupons are a CPT, not a table
+:::note[Coupons are a CPT, not a table]
 Unlike orders, coupons are stored as the `storeengine_coupon` custom post type. There is no `storeengine_coupons` table.
 :::
 
@@ -126,7 +126,7 @@ $count = $wpdb->get_var(
 );
 ```
 
-:::tip Owning your own tables
+:::tip[Owning your own tables]
 If your addon needs its own table, follow the same install/upgrade pattern StoreEngine uses. See [Building Addons › Database Tables](/addons/database-tables).
 :::
 

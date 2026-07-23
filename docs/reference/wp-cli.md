@@ -76,7 +76,7 @@ Backup commands are provided by `StoreEngine\Backup\Cli`. Run `wp help storeengi
 
 ## `wp storeengine license`
 
-:::note Requires the addon
+:::note[Requires the addon]
 The `license` command is only registered when the **license-management** addon is active. If it is off, `wp storeengine license` is unavailable.
 :::
 

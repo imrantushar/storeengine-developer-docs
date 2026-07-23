@@ -92,7 +92,7 @@ addons/{slug}/
 
 The loader (`storeengine/addons/loader_args` for free, `storeengine_pro/addons/loader_args` for Pro) maps a slug to a class name; on load, StoreEngine registers `StoreEngine\Addons\{ClassName}` (or `StoreEnginePro\Addons\{ClassName}`) to the addon directory, calls `init()` then `run()`, and — if the addon is active — includes it in schema syncing. See [Building Addons](/addons/architecture) for a full walkthrough.
 
-:::note Addon autoload path rewrite
+:::note[Addon autoload path rewrite]
 The core autoloader special-cases addon namespaces: paths resolving under `includes/addons/` are rewritten to the top-level `addons/` directory, so addon classes live at `addons/{slug}/` while sharing the `StoreEngine\Addons\` namespace.
 :::
 
